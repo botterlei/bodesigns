@@ -100,21 +100,44 @@ The page is auto-discovered at `/work/your-slug` and added to listings.
 Create `src/content/blog/your-slug.mdx` with frontmatter (title, slug, date,
 summary, tags). It will appear at `/blog/your-slug`.
 
-## Deploying to GitHub Pages with a custom domain
+## Deploying to GitHub Pages
 
-### GitHub repository setup
+The site auto-deploys to GitHub Pages on every push to `main` via
+[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). The workflow
+runs `npm ci → typecheck → build`, copies `dist/index.html → dist/404.html`
+as an SPA fallback, and publishes `dist/` using the official
+`actions/deploy-pages` flow (no `gh-pages` branch required).
 
-1. Push this repo to a GitHub repository (e.g. `bodesigns/bodesigns`)
-2. **Settings → Pages → Build and deployment → Source**: choose
-   "GitHub Actions"
-3. The workflow at `.github/workflows/deploy.yml` will run on every push to
-   `main`, build with `vite-react-ssg`, and publish `dist/`
+### One-time GitHub setup
 
-### DNS records (set at your registrar)
+1. Push the repo to GitHub (already done — `botterlei/bodesigns`).
+2. **Settings → Pages → Build and deployment → Source** → select
+   **"GitHub Actions"**.
+3. **Settings → Actions → General → Workflow permissions** → ensure
+   "Read and write permissions" is enabled (needed for Pages deployments).
+4. Trigger the first deploy by pushing to `main`, or run the workflow
+   manually from the **Actions** tab → **Deploy to GitHub Pages** → **Run
+   workflow**.
 
-Add the following for `bodesigns.com`:
+### Day-to-day workflow
 
-| Type  | Host | Value (GitHub Pages)                  |
+```sh
+git add .
+git commit -m "your change"
+git push origin main
+# → Actions tab shows the build and deploy
+# → site is live at bodesigns.com a minute or two later
+```
+
+You can watch progress under **Actions → Deploy to GitHub Pages**, and the
+deployed URL appears on the **Deployments** sidebar of the repo home page.
+
+### Custom domain — DNS records
+
+`public/CNAME` already pins the apex domain `bodesigns.com` so it survives
+every redeploy. Add these records at your DNS registrar:
+
+| Type  | Host | Value                                 |
 | ----- | ---- | ------------------------------------- |
 | A     | @    | 185.199.108.153                       |
 | A     | @    | 185.199.109.153                       |
@@ -124,10 +147,21 @@ Add the following for `bodesigns.com`:
 | AAAA  | @    | 2606:50c0:8001::153                   |
 | AAAA  | @    | 2606:50c0:8002::153                   |
 | AAAA  | @    | 2606:50c0:8003::153                   |
-| CNAME | www  | `your-github-username.github.io`      |
+| CNAME | www  | `botterlei.github.io`                 |
 
-The `public/CNAME` file pins the custom domain so it survives every redeploy.
-After DNS propagates, enable "Enforce HTTPS" in GitHub Pages settings.
+Once DNS propagates (often within minutes; up to ~24h), tick **Enforce
+HTTPS** in **Settings → Pages**. GitHub will provision a Let's Encrypt
+certificate automatically.
+
+### Notes
+
+- Every route is statically prerendered by `vite-react-ssg`, so direct loads
+  of e.g. `/work/twine-retirement-visualizer` work natively (GitHub Pages
+  serves the matching `.html`). The `404.html` is a safety net for any path
+  not pre-rendered.
+- `dist/` is git-ignored — CI builds it fresh on every deploy.
+- To deploy manually without CI, run `npm run build` and point any static
+  host at `dist/`.
 
 ## Responsive design
 
