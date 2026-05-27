@@ -111,13 +111,14 @@ as an SPA fallback, and publishes `dist/` using the official
 ### One-time GitHub setup
 
 1. Push the repo to GitHub (already done — `botterlei/bodesigns`).
-2. **Settings → Pages → Build and deployment → Source** → select
-   **"GitHub Actions"**.
-3. **Settings → Actions → General → Workflow permissions** → ensure
-   "Read and write permissions" is enabled (needed for Pages deployments).
-4. Trigger the first deploy by pushing to `main`, or run the workflow
+2. **Settings → Actions → General → Workflow permissions** → select
+   **"Read and write permissions"** (required so the workflow can enable
+   Pages and publish the artifact).
+3. Trigger the first deploy by pushing to `main` or running the workflow
    manually from the **Actions** tab → **Deploy to GitHub Pages** → **Run
-   workflow**.
+   workflow**. The workflow uses `actions/configure-pages` with
+   `enablement: true`, so it will auto-enable Pages and set the source to
+   "GitHub Actions" on the first run — no manual toggle needed.
 
 ### Day-to-day workflow
 
