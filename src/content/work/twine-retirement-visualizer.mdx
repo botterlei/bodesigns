@@ -1,0 +1,101 @@
+---
+title: 'Twine: the anti-retirement calculator'
+slug: 'twine-retirement-visualizer'
+client: 'Twine (John Hancock)'
+role: 'Product Design Lead'
+year: '2019'
+order: 3
+summary: 'Reframed retirement planning as a visualizer, not a calculator. A two-week sprint that tested favorably against NerdWallet and shipped contextual advice rather than a wall of numbers.'
+tags: ['FinTech', 'iOS', 'Behavioral Design', 'Rapid Prototyping']
+metrics:
+  - label: 'Apple App of the Day'
+    value: '3×'
+  - label: 'App Store rating'
+    value: '4.6'
+  - label: 'AUM'
+    value: '$20M'
+team:
+  - 'Manya Scheps — Sr Product Manager'
+  - 'Ryan Anderson — Sr Design Researcher'
+  - 'Paul Wyatt — Lead Data Scientist'
+  - 'Brent Otterlei — Product Design Lead'
+  - 'Erin Opperman — Creative Director'
+  - 'Damir Stohec — Lead iOS Developer'
+---
+
+<Lede>
+  Every retirement calculator in the market asks for your life story and returns a
+  six-figure number you can’t act on. Twine’s hypothesis was that users didn’t want a
+  number at all.
+</Lede>
+
+<Section eyebrow="Hypothesis" number={1} title="Users want answers, not arithmetic">
+  The category convention — fifteen form fields, a giant scary total, and a polite
+  suggestion to "consult an advisor" — fails on its own terms. It demands work the user
+  isn’t equipped to do, then rewards them with a number they don’t know how to use.
+
+  We started from the opposite premise. Users want two things: can I retire at all,
+  and what do I do about it. The interface should be designed for those two answers,
+  not for a goal-setting calculation.
+</Section>
+
+<Section eyebrow="Sprint" number={2} title="Two weeks, one bet">
+  The team had two weeks to prove or kill the thesis. I led divergent exploration in
+  the first days, narrowed on a quiz-first format, and built a high-fidelity Figma
+  prototype ready for testing in the second week.
+
+  <ProcessList
+    steps={[
+      {
+        title: 'Divergent exploration',
+        body: 'Wide scan of category conventions and adjacent visualizers for paradigms worth borrowing.',
+      },
+      {
+        title: 'Format convergence',
+        body: 'Settled on a quiz-first input model — short, conversational, opt-in to depth — rather than the standard up-front form wall.',
+      },
+      {
+        title: 'Prototype',
+        body: 'High-fidelity Figma prototype with the three outcome variants, ready for moderated head-to-head testing.',
+      },
+    ]}
+  />
+</Section>
+
+<FigureSlot
+  number={1}
+  label="Visualizer, not calculator"
+  meta="Figma prototype · Sprint week 1"
+  aspect="3/2"
+  caption="Outcome screens designed around an actionable verdict — “you can retire at 67” — with category-appropriate next steps, rather than a single intimidating total."
+/>
+
+<Section eyebrow="Test" number={3} title="Head-to-head against NerdWallet">
+  We ran the prototype against NerdWallet’s retirement calculator with target users in
+  the second week. Users consistently responded better to “you can retire at 67” plus
+  actionable advice than to a six-figure goal they had no plan to reach.
+
+  The advice itself was segmented into three buckets, each with appropriate language
+  and a different call to action.
+</Section>
+
+<Callout label="Three states, three voices">
+  **On-track** users got reinforcement and a small optimization to consider. **Behind**
+  users got a clear, calm framing and one specific action. **Way-behind** users got
+  empathy first, then triage — never a number that asked them to give up.
+</Callout>
+
+<Pull>
+  Replace the number with a verdict and an action.
+</Pull>
+
+<Section eyebrow="Outcome" number={4} title="What stuck">
+  Twine the company shut down before the visualizer reached production. What didn’t
+  shut down was the approach. The same principle — verdict over total, action over
+  arithmetic, empathy at the bottom of the funnel — has held up across every consumer
+  financial product I’ve touched since.
+
+  The app itself was an Apple App of the Day three times, held a 4.6 App Store rating,
+  and managed $20M in AUM at its peak — credentials carried by the team and the craft,
+  even when this particular feature didn’t ship.
+</Section>

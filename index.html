@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0A0A0A" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Brent Otterlei — Senior Product Designer</title>
+    <meta
+      name="description"
+      content="Brent Otterlei is a senior product designer with 20+ years of experience designing systems and shipping products at Workday, Twine, Walmart Labs, Verifone, Clip, VISA and more."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Brent Otterlei — Senior Product Designer" />
+    <meta
+      property="og:description"
+      content="Senior product designer focused on systems thinking, AI, and turning business goals into shipped product."
+    />
+    <meta property="og:url" content="https://bodesigns.com/" />
+    <meta property="og:image" content="https://bodesigns.com/og-default.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://bodesigns.com/" />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme')
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+          if (stored === 'dark' || (!stored && prefersDark)) {
+            document.documentElement.classList.add('dark')
+          }
+        } catch (e) {}
+      })()
+    </script>
+  </head>
+  <body class="bg-paper text-ink antialiased dark:bg-ink dark:text-paper">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
