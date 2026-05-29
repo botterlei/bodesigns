@@ -19,7 +19,7 @@ function Mark({ className = '' }: { className?: string }) {
       strokeLinecap="square"
     >
       <line x1="16" y1="0" x2="16" y2="32" />
-      <line x1="0" y1="16" x2="16" y2="16" />
+      <line x1="0" y1="16" x2="32" y2="16" />
       <circle cx="16" cy="16" r="10" />
       <rect x="16" y="8" width="6.5" height="16" />
     </svg>

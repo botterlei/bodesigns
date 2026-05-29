@@ -141,8 +141,8 @@ function Hero() {
         that move businesses forward.
       </h1>
       <p className="mt-6 md:mt-8 max-w-[55ch] text-lg md:text-xl text-muted text-pretty fade-in-up-delay-2">
-        Twenty-plus years of product design across FinTech, e-commerce, payments and
-        enterprise HR. Currently designing AI-assisted talent management at Workday.
+        Twenty-plus years of product design across FinTech, E-Commerce and
+        Enterprise HR. Currently designing AI-assisted benefits management at Workday.
       </p>
       <div className="mt-10 flex flex-col sm:flex-row gap-3 fade-in-up-delay-2">
         <Link
