@@ -16,7 +16,7 @@ export default function WorkIndex() {
       <Container className="pt-12 md:pt-20 lg:pt-28 pb-12 md:pb-16">
         <p className="eyebrow mb-6">Work</p>
         <h1 className="display-1 max-w-[20ch] text-balance">
-          Case studies, sized to the question.
+          My Work.
         </h1>
         <p className="mt-6 max-w-[55ch] text-lg md:text-xl text-muted text-pretty">
           Selected projects across FinTech, e-commerce, and enterprise HR. Workday

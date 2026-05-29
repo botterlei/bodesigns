@@ -29,8 +29,7 @@ export default function Nav() {
     <>
       <header className="sticky top-0 z-30 bg-paper/85 supports-[backdrop-filter]:backdrop-blur-sm dark:bg-ink/80 border-b border-rule">
         <Container className="flex items-center justify-between h-16 lg:h-20">
-          <Logo showTagline className="hidden sm:inline-flex" />
-          <Logo showTagline={false} className="inline-flex sm:hidden" />
+          <Logo className="inline-flex" />
 
           <nav className="hidden lg:flex items-center gap-8" aria-label="Primary">
             {links.map((l) => (

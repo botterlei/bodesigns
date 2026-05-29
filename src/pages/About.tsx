@@ -14,7 +14,7 @@ export default function About() {
       <Container className="pt-12 md:pt-20 lg:pt-28 pb-12 md:pb-16">
         <p className="eyebrow mb-6">About</p>
         <h1 className="display-1 max-w-[18ch] text-balance">
-          I sketch before pixels. I tie design to outcomes.
+          I design products.
         </h1>
       </Container>
 

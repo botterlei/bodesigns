@@ -65,9 +65,9 @@ export function getAllWork(): WorkItem[] {
     }))
     .filter((item) => !item.frontmatter?.draft)
     .sort((a, b) => {
-      const ao = a.frontmatter?.order ?? 100
-      const bo = b.frontmatter?.order ?? 100
-      return ao - bo
+      const ao = a.frontmatter?.order ?? -Infinity
+      const bo = b.frontmatter?.order ?? -Infinity
+      return bo - ao
     })
 }
 

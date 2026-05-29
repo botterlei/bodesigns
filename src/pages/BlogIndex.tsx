@@ -15,7 +15,7 @@ export default function BlogIndex() {
       <Container className="pt-12 md:pt-20 lg:pt-28 pb-12 md:pb-16">
         <p className="eyebrow mb-6">Blog</p>
         <h1 className="display-1 max-w-[20ch] text-balance">
-          Notes on design, AI, and the business of shipping.
+          Thoughts on Design, AI, etc.
         </h1>
       </Container>
 

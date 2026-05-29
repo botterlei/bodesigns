@@ -18,7 +18,7 @@ export default function AIShowcase() {
       <Container className="pt-12 md:pt-20 lg:pt-28 pb-12 md:pb-16">
         <p className="eyebrow mb-6">AI showcase</p>
         <h1 className="display-1 max-w-[20ch] text-balance">
-          AI as a material, not a feature.
+          How AI integrates into my process and products.
         </h1>
         <p className="mt-6 max-w-[55ch] text-lg md:text-xl text-muted text-pretty">
           A running collection of how I use AI inside my design practice and the products
