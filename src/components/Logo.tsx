@@ -35,7 +35,7 @@ export default function Logo({ className = '', asLink = true }: LogoProps) {
         className="h-7 lg:h-8 w-px bg-current opacity-30"
       />
       <span className="font-display font-light text-xl lg:text-2xl tracking-tight leading-none">
-        bodesigns<span className="text-muted">.com</span>
+        <span className="font-bold">bo</span>designs<span className="text-muted">.com</span>
       </span>
     </>
   )
