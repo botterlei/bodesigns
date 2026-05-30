@@ -38,7 +38,7 @@ export default function Resume() {
         </div>
       </Container>
 
-      <Container as="section" className="pb-16">
+      <Container as="section" frosted className="pb-16">
         <div className="grid gap-12 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-3">
             <p className="eyebrow mb-3">Experience</p>
@@ -84,7 +84,7 @@ export default function Resume() {
         </div>
       </Container>
 
-      <Container as="section" className="py-12 rule">
+      <Container as="section" frosted className="py-12 rule">
         <div className="grid gap-12 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-3">
             <p className="eyebrow mb-3">Skills</p>
@@ -100,7 +100,7 @@ export default function Resume() {
         </div>
       </Container>
 
-      <Container as="section" className="py-12 rule">
+      <Container as="section" frosted className="py-12 rule">
         <div className="grid gap-12 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-3">
             <p className="eyebrow mb-3">Tools</p>
@@ -118,7 +118,7 @@ export default function Resume() {
         </div>
       </Container>
 
-      <Container as="section" className="py-12 rule">
+      <Container as="section" frosted className="py-12 rule">
         <div className="grid gap-12 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-3">
             <p className="eyebrow mb-3">Education</p>

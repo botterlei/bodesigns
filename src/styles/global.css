@@ -152,6 +152,10 @@
     }
   }
 
+  .surface-frosted {
+    @apply bg-paper/40 supports-[backdrop-filter]:backdrop-blur-[2px] dark:bg-ink/35;
+  }
+
   .display-1 {
     font-family: var(--font-display);
     font-size: clamp(2.75rem, 8vw, 7.25rem);

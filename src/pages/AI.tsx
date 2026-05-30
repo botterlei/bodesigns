@@ -27,7 +27,7 @@ export default function AIShowcase() {
         </p>
       </Container>
 
-      <Container as="section" className="pb-16 md:pb-24">
+      <Container as="section" frosted className="pb-16 md:pb-24">
         <div className="grid gap-12 md:gap-16 md:grid-cols-2">
           {aiWork.length === 0 ? (
             <div className="md:col-span-2 border border-rule rounded-lg p-10 text-center">
@@ -54,7 +54,7 @@ export default function AIShowcase() {
         </div>
       </Container>
 
-      <Container as="section" className="py-12 md:py-20 rule">
+      <Container as="section" frosted className="py-12 md:py-20 rule">
         <p className="eyebrow mb-3">Prototypes</p>
         <h2 className="display-2 max-w-[20ch] text-balance">
           Embedded AI prototype slots.

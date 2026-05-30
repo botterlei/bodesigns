@@ -23,7 +23,7 @@ export default function Process() {
         </p>
       </Container>
 
-      <Container className="pb-16 md:pb-24">
+      <Container frosted className="pb-16 md:pb-24">
         <ol className="grid gap-12 md:gap-16">
           {PROCESS_STEPS.map((step, i) => (
             <li key={step.id} className="grid gap-6 md:grid-cols-12 md:gap-12 rule pt-12">
@@ -42,7 +42,7 @@ export default function Process() {
         </ol>
       </Container>
 
-      <Container className="py-16 md:py-24 rule">
+      <Container frosted className="py-16 md:py-24 rule">
         <p className="display-3 max-w-[24ch] text-balance">
           See it in action.{' '}
           <Link to="/work" className="link-underline text-accent">

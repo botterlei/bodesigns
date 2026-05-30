@@ -24,7 +24,7 @@ export default function WorkIndex() {
         </p>
       </Container>
 
-      <Container className="pb-24">
+      <Container frosted className="pb-24">
         <div className="grid gap-12 md:gap-16 md:grid-cols-2">
           {work.map((item) => (
             <CaseStudyCard

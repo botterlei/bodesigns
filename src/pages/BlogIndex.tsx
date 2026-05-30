@@ -19,7 +19,7 @@ export default function BlogIndex() {
         </h1>
       </Container>
 
-      <Container className="pb-24">
+      <Container frosted className="pb-24">
         <ul className="grid gap-10">
           {posts.map((p) => (
             <li key={p.slug} className="rule pt-10">

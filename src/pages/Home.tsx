@@ -17,7 +17,7 @@ export default function Home() {
       <SEO path="/" />
       <Hero />
 
-      <Container as="section" className="py-20 md:py-28 lg:py-32">
+      <Container as="section" frosted className="py-20 md:py-28 lg:py-32">
         <SectionHeader
           eyebrow="Selected work"
           title="A few of the products I’m proud of."
@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       </Container>
 
-      <Container as="section" className="py-20 md:py-28 lg:py-32 rule">
+      <Container as="section" frosted className="py-20 md:py-28 lg:py-32 rule">
         <div className="grid gap-10 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-5">
             <SectionHeader
@@ -65,7 +65,7 @@ export default function Home() {
         </div>
       </Container>
 
-      <Container as="section" className="py-20 md:py-28 lg:py-32 rule">
+      <Container as="section" frosted className="py-20 md:py-28 lg:py-32 rule">
         <div className="grid gap-10 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-5">
             <SectionHeader
@@ -96,7 +96,7 @@ export default function Home() {
         </div>
       </Container>
 
-      <Container as="section" className="py-20 md:py-28 lg:py-32 rule">
+      <Container as="section" frosted className="py-20 md:py-28 lg:py-32 rule">
         <SectionHeader
           eyebrow="Process"
           title="A repeatable six-step practice."
@@ -108,7 +108,7 @@ export default function Home() {
         </div>
       </Container>
 
-      <Container as="section" className="py-20 md:py-28 lg:py-32 rule">
+      <Container as="section" frosted className="py-20 md:py-28 lg:py-32 rule">
         <SectionHeader
           eyebrow="In the press"
           title="My work in the news."

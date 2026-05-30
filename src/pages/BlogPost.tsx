@@ -87,7 +87,7 @@ export default function BlogPost() {
           </p>
         ) : null}
       </Container>
-      <Container width="reading" className="pb-24">
+      <Container frosted width="reading" className="pb-24">
         <MDXProvider components={mdxComponents}>
           <Component />
         </MDXProvider>

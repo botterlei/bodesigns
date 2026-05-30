@@ -19,7 +19,7 @@ const internal = [
 export default function Footer() {
   const year = new Date().getFullYear()
   return (
-    <footer className="rule mt-24 pt-16 pb-10 lg:pt-24">
+    <footer className="rule mt-24 pt-16 pb-10 lg:pt-24 w-full surface-frosted">
       <Container className="grid gap-12 md:grid-cols-3">
         <div className="md:col-span-1">
           <div className="display-3 mb-3">Let's build something.</div>

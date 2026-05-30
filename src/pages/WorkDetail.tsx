@@ -125,14 +125,14 @@ export default function WorkDetail() {
         ) : null}
       </Container>
 
-      <Container width="reading" className="pb-12">
+      <Container frosted width="reading" className="pb-12">
         <MDXProvider components={mdxComponents}>
           <Component />
         </MDXProvider>
       </Container>
 
       {frontmatter.team && frontmatter.team.length > 0 ? (
-        <Container as="section" className="py-12 rule">
+        <Container as="section" frosted className="py-12 rule">
           <p className="eyebrow mb-4">Team</p>
           <ul className="grid gap-2 text-lg">
             {frontmatter.team.map((t) => (
@@ -142,7 +142,7 @@ export default function WorkDetail() {
         </Container>
       ) : null}
 
-      <Container as="nav" className="py-16 grid gap-6 md:grid-cols-2 rule">
+      <Container as="nav" frosted className="py-16 grid gap-6 md:grid-cols-2 rule">
         {prev ? (
           <Link to={`/work/${prev.slug}`} className="group">
             <div className="eyebrow mb-2">Previous</div>

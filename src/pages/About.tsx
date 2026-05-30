@@ -18,7 +18,7 @@ export default function About() {
         </h1>
       </Container>
 
-      <Container width="reading" className="pb-16 md:pb-24">
+      <Container frosted width="reading" className="pb-16 md:pb-24">
         <div className="flex flex-col gap-6 text-lg md:text-xl leading-relaxed text-pretty">
           <p>
             I'm Brent Otterlei — a senior product designer with 20+ years of experience.
@@ -43,7 +43,7 @@ export default function About() {
         </div>
       </Container>
 
-      <Container as="section" className="py-12 md:py-20 rule">
+      <Container as="section" frosted className="py-12 md:py-20 rule">
         <div className="grid gap-10 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-4">
             <p className="eyebrow mb-3">Skills</p>
@@ -60,7 +60,7 @@ export default function About() {
         </div>
       </Container>
 
-      <Container as="section" className="py-12 md:py-20 rule">
+      <Container as="section" frosted className="py-12 md:py-20 rule">
         <div className="grid gap-10 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-4">
             <p className="eyebrow mb-3">Tools</p>
@@ -79,7 +79,7 @@ export default function About() {
         </div>
       </Container>
 
-      <Container as="section" className="py-12 md:py-20 rule">
+      <Container as="section" frosted className="py-12 md:py-20 rule">
         <div className="grid gap-10 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-4">
             <p className="eyebrow mb-3">Education</p>
@@ -99,7 +99,7 @@ export default function About() {
         </div>
       </Container>
 
-      <Container className="py-16 md:py-24">
+      <Container frosted className="py-16 md:py-24">
         <p className="display-3 max-w-[24ch] text-balance">
           Want to talk?{' '}
           <a href="mailto:hello@bodesigns.com" className="link-underline text-accent">
