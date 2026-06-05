@@ -13,39 +13,38 @@ type Props = {
 
 export default function Marquee({ items }: Props) {
   return (
-    <div className="overflow-hidden">
-      <ul className="flex flex-wrap gap-x-10 gap-y-6 items-baseline md:flex-nowrap md:overflow-x-auto md:no-scrollbar md:snap-x md:snap-mandatory">
-        {items.map((it) => {
-          const content = (
-            <span className="flex items-baseline gap-3 whitespace-nowrap">
-              <span className="font-display text-xl md:text-2xl tracking-tight">
-                {it.label}
-              </span>
-              {it.source ? (
-                <span className="font-mono text-xs uppercase tracking-[0.16em] text-muted">
-                  {it.source}
-                </span>
-              ) : null}
+    <ul className="grid gap-8 md:gap-10 md:grid-cols-2">
+      {items.map((it) => {
+        const content = (
+          <span className="flex flex-col gap-2">
+            <span className="font-display text-xl md:text-2xl tracking-tight text-balance leading-snug">
+              {it.label}
             </span>
-          )
-          return (
-            <li key={it.label} className="md:snap-start md:flex-none">
-              {it.href ? (
-                <a
-                  href={it.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link-underline"
-                >
-                  {content}
-                </a>
-              ) : (
-                content
-              )}
-            </li>
-          )
-        })}
-      </ul>
-    </div>
+            {it.source ? (
+              <span className="font-mono text-xs uppercase tracking-[0.16em] text-muted">
+                {it.source}
+              </span>
+            ) : null}
+          </span>
+        )
+
+        return (
+          <li key={it.label}>
+            {it.href ? (
+              <a
+                href={it.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-underline block"
+              >
+                {content}
+              </a>
+            ) : (
+              content
+            )}
+          </li>
+        )
+      })}
+    </ul>
   )
 }

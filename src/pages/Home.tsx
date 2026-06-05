@@ -21,7 +21,7 @@ export default function Home() {
         <SectionHeader
           eyebrow="Selected work"
           title="A few of the products I’m proud of."
-          description="Twenty-plus years across FinTech, e-commerce, payments, and enterprise HR. Each of these moved the business meaningfully and shipped to real users."
+          description="Two decades. Four industries. Products that shipped, scaled, and actually mattered."
           cta={{ to: '/work', label: 'See all work' }}
         />
         <div className="mt-12 md:mt-16 grid gap-12 md:gap-16">
@@ -40,20 +40,15 @@ export default function Home() {
           <div className="md:col-span-5">
             <SectionHeader
               eyebrow="About"
-              title="Design that has to earn its place in the business."
+              title="Hi, I'm Brent."
             />
           </div>
           <div className="md:col-span-7 flex flex-col gap-6 text-lg md:text-xl text-pretty leading-relaxed">
             <p>
-              I'm Brent — a senior product designer with twenty-plus years of experience
-              across FinTech, e-commerce, and enterprise HR. I lead with research, sketch
-              before pixels, and tie every decision back to a business outcome.
+            My process starts with research and doesn't skip the hard work in between — workshops, whiteboarding, and lo-fi concepts tested early and often.
             </p>
             <p>
-              I'm currently at Workday designing talent management and benefits
-              experiences, with a focus on integrating AI into core HR workflows. Before
-              Workday: Twine, Sam's Club / Walmart Labs, Verifone, Clip, VISA Checkout,
-              PlaySpan, FanSnap.
+            I use AI to accelerate the work without shortcutting the thinking. By the time pixels get placed, the hard decisions are already made.
             </p>
             <Link
               to="/about"
@@ -99,8 +94,8 @@ export default function Home() {
       <Container as="section" frosted className="py-20 md:py-28 lg:py-32 rule">
         <SectionHeader
           eyebrow="Process"
-          title="A repeatable six-step practice."
-          description="The same loop — research, synthesis, ideate, prototype, validate, metrics — has held up across every team and product I’ve worked on. Tap a step to dig in."
+          title="The double diamond, supercharged by AI."
+          description="Research, synthesis, ideate, prototype, validate, track — Now faster than ever. Tap a step to dig in."
           cta={{ to: '/process', label: 'Read the process' }}
         />
         <div className="mt-12">
@@ -141,8 +136,7 @@ function Hero() {
         that move businesses forward.
       </h1>
       <p className="mt-6 md:mt-8 max-w-[55ch] text-lg md:text-xl text-muted text-pretty fade-in-up-delay-2">
-        Twenty-plus years of product design across FinTech, E-Commerce and
-        Enterprise HR. Currently designing AI-assisted benefits management at Workday.
+      Two decades of product design in FinTech, E-Commerce, and Enterprise HR — now shaping how AI changes the way people manage their benefits at Workday.
       </p>
       <div className="mt-10 flex flex-col sm:flex-row gap-3 fade-in-up-delay-2">
         <Link
