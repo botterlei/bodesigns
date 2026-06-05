@@ -70,7 +70,7 @@ export default function Home() {
           <div className="md:col-span-5">
             <SectionHeader
               eyebrow="Now"
-              title="AI, integrated into the practice."
+              title="AI, integrated into the process."
               description="I’m exploring how AI changes the design process and the products themselves — from research synthesis to in-product copilots — inside Workday and on side projects."
               cta={{ to: '/ai', label: 'AI showcase' }}
             />

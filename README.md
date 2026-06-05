@@ -100,6 +100,28 @@ The page is auto-discovered at `/work/your-slug` and added to listings.
 Create `src/content/blog/your-slug.mdx` with frontmatter (title, slug, date,
 summary, tags). It will appear at `/blog/your-slug`.
 
+### Confidential case studies (Workday / NDA)
+
+Workday projects are gated behind a password login. On the work index they show
+a lock overlay; visitors must sign in to open the full case study.
+
+1. Copy `.env.example` → `.env.local` and set `VITE_CONFIDENTIAL_ACCESS_PASSWORD`.
+2. For production, add the same value as a GitHub repo secret named
+   `CONFIDENTIAL_ACCESS_PASSWORD` (used by the deploy workflow at build time).
+
+Mark any case study as confidential in frontmatter:
+
+```yaml
+confidential: true
+```
+
+Projects with `client: Workday` are confidential by default. Set
+`confidential: false` to opt out.
+
+**Note:** This is a client-side gate suitable for a portfolio (keeps casual
+visitors out). It is not server-grade security — do not rely on it for highly
+sensitive material.
+
 ## Deploying to GitHub Pages
 
 The site auto-deploys to GitHub Pages on every push to `main` via

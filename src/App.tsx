@@ -2,6 +2,7 @@ import { Outlet, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
+import ConfidentialAccessProvider from './components/ConfidentialAccessProvider'
 
 export default function App() {
   const { pathname } = useLocation()
@@ -20,13 +21,15 @@ export default function App() {
       >
         Skip to content
       </a>
-      <div className="relative z-10 flex flex-col min-h-screen">
-        <Nav />
-        <main id="main" className="flex-1">
-          <Outlet />
-        </main>
-        <Footer />
-      </div>
+      <ConfidentialAccessProvider>
+        <div className="relative z-10 flex flex-col min-h-screen">
+          <Nav />
+          <main id="main" className="flex-1">
+            <Outlet />
+          </main>
+          <Footer />
+        </div>
+      </ConfidentialAccessProvider>
     </div>
   )
 }

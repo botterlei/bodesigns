@@ -1,7 +1,10 @@
 import { Link, useParams } from 'react-router-dom'
 import Container from '@/components/Container'
+import ConfidentialWorkGate from '@/components/ConfidentialWorkGate'
+import { useConfidentialAccess } from '@/components/ConfidentialAccessProvider'
 import SEO from '@/lib/seo'
 import { getWorkBySlug, getAllWork } from '@/lib/content'
+import { isConfidentialWork } from '@/lib/confidential-access'
 import { MDXProvider } from '@mdx-js/react'
 import {
   Lede,
@@ -55,6 +58,7 @@ const mdxComponents = {
 
 export default function WorkDetail() {
   const { slug = '' } = useParams<{ slug: string }>()
+  const { unlocked } = useConfidentialAccess()
   const item = getWorkBySlug(slug)
 
   if (!item) {
@@ -70,6 +74,7 @@ export default function WorkDetail() {
   }
 
   const { frontmatter, Component } = item
+  const locked = isConfidentialWork(frontmatter) && !unlocked
   const all = getAllWork()
   const idx = all.findIndex((w) => w.slug === slug)
   const prev = idx > 0 ? all[idx - 1] : undefined
@@ -84,6 +89,10 @@ export default function WorkDetail() {
         type="article"
       />
 
+      {locked ? <ConfidentialWorkGate frontmatter={frontmatter} /> : null}
+
+      {!locked ? (
+        <>
       <Container className="pt-12 md:pt-20 pb-8">
         <Link
           to="/work"
@@ -164,6 +173,8 @@ export default function WorkDetail() {
           <div />
         )}
       </Container>
+        </>
+      ) : null}
     </>
   )
 }

@@ -36,6 +36,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VITE_CONFIDENTIAL_ACCESS_PASSWORD: ${{ secrets.CONFIDENTIAL_ACCESS_PASSWORD }}
 
       - name: SPA fallback (404.html)
         run: cp dist/index.html dist/404.html

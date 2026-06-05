@@ -13,6 +13,8 @@ export type WorkFrontmatter = {
   team?: string[]
   draft?: boolean
   order?: number
+  /** Gate behind password login (Workday projects default to confidential) */
+  confidential?: boolean
 }
 
 export type BlogFrontmatter = {
