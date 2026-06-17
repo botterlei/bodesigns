@@ -4,7 +4,6 @@ import Home from './pages/Home'
 import About from './pages/About'
 import WorkIndex from './pages/WorkIndex'
 import WorkDetail from './pages/WorkDetail'
-import AIShowcase from './pages/AI'
 import Process from './pages/Process'
 import BlogIndex from './pages/BlogIndex'
 import BlogPost from './pages/BlogPost'
@@ -25,7 +24,6 @@ export const routes: RouteRecord[] = [
         element: <WorkDetail />,
         getStaticPaths: () => listWorkSlugs(),
       },
-      { path: 'ai', element: <AIShowcase /> },
       { path: 'process', element: <Process /> },
       { path: 'blog', element: <BlogIndex /> },
       {

@@ -1,6 +1,6 @@
 import Container from '@/components/Container'
 import SEO from '@/lib/seo'
-import { skills, tools, education } from '@/content/resume'
+import { skills, tools } from '@/content/resume'
 import { Link } from 'react-router-dom'
 
 export default function About() {
@@ -74,26 +74,6 @@ export default function About() {
               >
                 {t}
               </span>
-            ))}
-          </div>
-        </div>
-      </Container>
-
-      <Container as="section" frosted className="py-12 md:py-20 rule">
-        <div className="grid gap-10 md:grid-cols-12 md:gap-16">
-          <div className="md:col-span-4">
-            <p className="eyebrow mb-3">Education</p>
-            <h2 className="display-2">School.</h2>
-          </div>
-          <div className="md:col-span-8 flex flex-col gap-6">
-            {education.map((e) => (
-              <div key={`${e.school}-${e.degree}`} className="border-l border-rule pl-5">
-                <div className="font-display text-xl">{e.school}</div>
-                <div className="text-muted">
-                  {e.degree}
-                  {e.note ? ` — ${e.note}` : ''}
-                </div>
-              </div>
             ))}
           </div>
         </div>

@@ -7,7 +7,6 @@ import Logo from './Logo'
 
 const links = [
   { to: '/work', label: 'Work' },
-  { to: '/ai', label: 'AI' },
   { to: '/process', label: 'Process' },
   { to: '/about', label: 'About' },
   { to: '/blog', label: 'Blog' },

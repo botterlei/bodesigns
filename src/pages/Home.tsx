@@ -61,37 +61,6 @@ export default function Home() {
       </Container>
 
       <Container as="section" frosted className="py-20 md:py-28 lg:py-32 rule">
-        <div className="grid gap-10 md:grid-cols-12 md:gap-16">
-          <div className="md:col-span-5">
-            <SectionHeader
-              eyebrow="Now"
-              title="AI, integrated into the process."
-              description="I’m exploring how AI changes the design process and the products themselves — from research synthesis to in-product copilots — inside Workday and on side projects."
-              cta={{ to: '/ai', label: 'AI showcase' }}
-            />
-          </div>
-          <div className="md:col-span-7 grid grid-cols-2 gap-4">
-            <AiCard
-              title="Talent Management AI"
-              body="Integrating AI assistance into talent management workflows at Workday."
-            />
-            <AiCard
-              title="Process automation"
-              body="Using AI to compress synthesis, ideation, and documentation — not replace them."
-            />
-            <AiCard
-              title="Prototyping"
-              body="Spinning up functional prototypes (this site included) with AI-assisted tooling."
-            />
-            <AiCard
-              title="Critical eye"
-              body="Where AI helps. Where it hurts. Writing about both."
-            />
-          </div>
-        </div>
-      </Container>
-
-      <Container as="section" frosted className="py-20 md:py-28 lg:py-32 rule">
         <SectionHeader
           eyebrow="Process"
           title="The double diamond, supercharged by AI."
@@ -153,14 +122,5 @@ function Hero() {
         </Link>
       </div>
     </Container>
-  )
-}
-
-function AiCard({ title, body }: { title: string; body: string }) {
-  return (
-    <div className="border border-rule rounded-lg p-5 md:p-6 bg-paper-soft dark:bg-ink-soft">
-      <div className="font-display text-lg md:text-xl mb-2">{title}</div>
-      <p className="text-sm text-muted leading-relaxed">{body}</p>
-    </div>
   )
 }
